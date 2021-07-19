@@ -14,3 +14,4 @@
 2) label where the state gets set and updated
 3) create the basic HTML (heading, form w/ input, radio buttons, and character select and finally, submit button)
 4) create the encounters data
+5) add a home folder with a js file and a function js file

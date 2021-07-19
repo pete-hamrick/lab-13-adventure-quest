@@ -1,45 +1,38 @@
-const monsters = {
-    id: 'monsters',
-    title: 'A Den of Monsters',
+const ingredients = {
+    id: 'ingredients',
+    title: 'Procure your ingredients from the store!',
     map: {
         top: '89%',
         left: '44%'
     },
-    image: 'monsters.jpg',
+    image: '.jpg',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        You enter the fresh produce chamber only to be confronted by a loud unmasked man shouting at an employee for asking him to put a mask on. What do you do?
     `,
     choices: [{
-        id: 'negotiate',
-        description: 'Negotiate with them',
+        id: 'confront',
+        description: 'Tell the man to put his mask on and stop being a big jerk',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
-        `,
-        hp: 0,
-        gold: 35
-    }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
-        `,
-        hp: -30,
-        gold: 50
-    }, {
-        id: 'run',
-        description: 'Run away like good Sir Robin',
-        result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            He redirects his ire towards you, berating you for 15 minutes about the country being free and his rights being his rights. You go home and get sick and are unable to make the perfect sandwich all week. 
         `,
         hp: -50,
-        gold: 0
+        supplies: 25
+    }, {
+        id: 'skip',
+        description: 'skip the fresh produce',
+        result: `
+            You go down unoccupied aisles and get what ingredients you can. Unfortunately, you go to the register with only bagged bread, sauerkraut, and pickled herring. These obviously make worse sandwiches.
+        `,
+        hp: -20,
+        supplies: 5
+    }, {
+        id: 'avoid',
+        description: 'Avoid for now, go to the free sample aisle and enjoy a small coffee or seltzer',
+        result: `
+            Because you have taken your time to enjoy the walk through the store, the big buffoon gets what he wanted, is satisfied, and leaves. You return to a peaceful produce aisle, grab superior fresh ingredients and find a 20 dollar bill!
+        `,
+        hp: 0,
+        gold: 60
     }]
 };
 
@@ -138,7 +131,7 @@ const treasure = {
 };
 
 const quests = [
-    monsters, 
+    ingredients, 
     treasure,
     dragon,
 ];
