@@ -9,3 +9,8 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+# The Adventure Quest
+1) create a google jamboard to show the basic UI and some elements
+2) label where the state gets set and updated
+3) create the basic HTML (heading, form w/ input, radio buttons, and character select and finally, submit button)
+4) create the encounters data
