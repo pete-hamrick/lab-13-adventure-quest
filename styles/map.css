@@ -1,4 +1,20 @@
 #quest-list {
+    background-image: url('../assets/map.jpg');
     display: flex;
     flex-direction: column;
+    height: 600px;
+    width: 400px;
+    background-size: 100% 100%;
+    justify-content: space-around;
+}
+a {
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.634);
+}
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

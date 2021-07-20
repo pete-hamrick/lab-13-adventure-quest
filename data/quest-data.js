@@ -1,6 +1,6 @@
 const ingredients = {
     id: 'ingredients',
-    title: 'Procure your ingredients from the store!',
+    title: '1. Procure your ingredients from the store!',
     map: {
         top: '89%',
         left: '44%'
@@ -40,7 +40,7 @@ const ingredients = {
 
 const build = {
     id: 'build',
-    title: 'Build the Perfect Sandwich!!!',
+    title: '2. Build the Perfect Sandwich!!!',
     map: {
         top: '17%',
         left: '37%'
@@ -92,7 +92,7 @@ const build = {
 
 const enjoy = {
     id: 'enjoy',
-    title: 'Time to sit down and enjoy the Perfect Sandwich',
+    title: '3. Time to sit down and enjoy the Perfect Sandwich',
     map: {
         top: '31%',
         left: '5%'
