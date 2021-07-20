@@ -6,4 +6,12 @@ img {
     display: flex;
     flex-direction: column;
     margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
 }
