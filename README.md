@@ -13,7 +13,10 @@
 1) create a google jamboard to show the basic UI and some elements
 2) label where the state gets set and updated
 3) create the basic HTML (heading, form w/ input, radio buttons, and character select and finally, submit button)
-4) create the encounters data
+4) create the encounters data and load asset images into a quest folder inside the assets folder.
 5) add a home folder with a js file and a function js file
 6) TDD make-user, getUser, and setUser
 7) Create a map folder with a map.js and index.html, have the form submit redirect to the map index.html
+8) Create a quest folder with a quest.js and index.html.
+9) Make map.js render a list of links to quest html file but with different quest ids.
+10) Make the quest.js render different quests based on the quest id.
