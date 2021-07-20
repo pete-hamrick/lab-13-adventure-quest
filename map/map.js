@@ -1,5 +1,12 @@
 import quests from '../data/quest-data.js';
-console.log(quests);
+import { getUser } from '../data/storage-utils.js';
+import { hasCompletedAllQuests } from './has-completed-all-quests.js';
+
+const user = getUser();
+
+if (user.hp <= 0 || hasCompletedAllQuests(user)){
+    window.location.replace('../results');
+}
 
 const questList = document.getElementById('quest-list');
 

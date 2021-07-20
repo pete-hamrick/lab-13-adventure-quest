@@ -1,5 +1,5 @@
 import quests from '../data/quest-data.js';
-import { findById } from '../data/storage-utils.js';
+import { findById, getUser, setUser } from '../data/storage-utils.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -29,3 +29,23 @@ for (let choice of quest.choices){
 
     choices.appendChild(label);
 }
+
+const questForm = document.getElementById('choice-form');
+questForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const choiceForm = new FormData(questForm);
+
+    const choiceValue = choiceForm.get('choice');
+    const choiceData = findById(quest.choices, choiceValue);
+
+    const user = getUser();
+    user.supplies += choiceData.supplies;
+    user.hp += choiceData.hp;
+    user.completed[quest.id] = true;
+    setUser(user);
+
+    const backLink = document.getElementById('back-link');
+    questDescription.textContent = choiceData.result;
+    questForm.classList.add('hidden');
+    backLink.classList.remove('hidden');
+});
