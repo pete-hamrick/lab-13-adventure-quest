@@ -1,8 +1,23 @@
+#user-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
 #user-form {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
 }
 
 body {
     background-color: rgb(255, 203, 182);
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.1rem;
+}
+label {
+    margin: 15px;
+}
+button {
+    margin-top: 15px;
 }
