@@ -12,3 +12,11 @@ export function setUser(userObject){
     // set in local storage
     localStorage.setItem(USER, userString);
 }
+
+export function findById(items, id) {
+    for (const item of items) {
+        if (item.id === id) {
+            return item;
+        }
+    }
+}

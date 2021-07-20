@@ -5,9 +5,11 @@ const ingredients = {
         top: '89%',
         left: '44%'
     },
-    image: '.jpg',
+    image: 'store.jpg',
     description: `
-        You enter the fresh produce chamber only to be confronted by a loud unmasked man shouting at an employee for asking him to put a mask on. What do you do?
+        You enter the fresh produce chamber only to be confronted 
+        by a loud unmasked man shouting at an employee for asking 
+        him to put a mask on. What do you do?
     `,
     choices: [{
         id: 'confront',
@@ -36,104 +38,99 @@ const ingredients = {
     }]
 };
 
-const dragon = {
-    id: 'dragon',
-    title: 'A HAIRY!!! Dragon',
+const build = {
+    id: 'build',
+    title: 'Build the Perfect Sandwich!!!',
     map: {
         top: '17%',
         left: '37%'
     },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
+    image: 'kitchen.png',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        You go to your kitchen to put together this Perfect Sandwich.
+        But the kitchen is a mess!!! The good knife is dirty, the cutting board 
+        is covered in food scraps and crumbs. You need to put the Sandwich together
+        quickly, but the mess is in the way of you and creating this sandwich.
     `,
     choices: [{
         id: 'run',
-        description: 'Get the hell out of the village',
+        description: 'Get the hell out of the house. Who even wants a sandwich?',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            You high tail it out of the house. Luckily,
+            while fleeing you find a bag of pretzels to eat.
+            Unluckily, your whole goal was to make the Perfect Sandwich. 
+            You die cause there's no point if you're not doing the Quest!
         `,
         hp: -35,
-        gold: 15
+        supplies: 15
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        id: 'dirty',
+        description: 'Use the dirty cutting board and knife',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            You use the good knife and dirty cutting board resulting
+            in a nearly Perfect Sandwich. However, when eaten there are other
+            food crumbs and even some hair in this making it a far from 
+            Perfect Sandwich. You have failed your Quest and die.
         `,
         hp: -45,
-        gold: 0
+        supplies: 0
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'clean',
+        description: 'Be a good person and clean before you get to work',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            Knowing better, you take the couple minutes to clean the cutting
+            board and your good knife. While this loses you a little time, it
+            is the good knife and you make up for lost time by quickly cutting up
+            your ingredients and putting together the Perfect Sandwich. The neighborhood
+            all suddenly wants one too and award you more supplies to make them
+            a Perfect Sandwich at a later date!
         `,
         hp: 0,
-        gold: 90
+        supplies: 90
     }]
 };
 
-const treasure = {
-    id: 'treasure',
-    title: 'A Golden Treasure',
+const enjoy = {
+    id: 'enjoy',
+    title: 'Time to sit down and enjoy the Perfect Sandwich',
     map: {
         top: '31%',
         left: '5%'
     },
     prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    image: 'diningroom.jpg',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        It is now time to find your comfy chair at the table and enjoy
+        the Perfect Sandwich after an adventurous time acquiring and putting 
+        it together. As you pick up your plate and move from the kitchen,
+        your two cute but enormous dogs come running because they also want
+        the Perfect Sandwich. What do you do next?
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        id: 'feed',
+        description: 'You feed them their food first',
+        result: 'You peacefully pacify them! You also find more delicious sandwich supplies in the cupboard!',
         hp: 0,
-        gold: 40
+        supplies: 40
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        id: 'ignore',
+        description: 'You ignore their begging and bad behavior',
+        result: 'Oh no! one of them jumps on you and while you move away from them the sandwich falls on the ground, they enjoy it. You die.',
         hp: -50,
         gold: 0
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
+        id: 'distract',
+        description: 'You attempt to distract them with a toy',
+        result: 'They love toys, but they love food more. One does chase the toy. But, during the chase, the other grabs the sandwich. You are sad.',
+        hp: -40,
         gold: 0
     }]
 };
 
 const quests = [
     ingredients, 
-    treasure,
-    dragon,
+    build,
+    enjoy,
 ];
 
 export default quests;

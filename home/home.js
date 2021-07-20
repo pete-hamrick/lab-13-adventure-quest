@@ -11,5 +11,5 @@ userForm.addEventListener('submit', e => {
 
     setUser(newUser);
 
-    window.location.replace('./map');
+    window.location.replace('./map/index.html');
 });

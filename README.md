@@ -15,3 +15,5 @@
 3) create the basic HTML (heading, form w/ input, radio buttons, and character select and finally, submit button)
 4) create the encounters data
 5) add a home folder with a js file and a function js file
+6) TDD make-user, getUser, and setUser
+7) Create a map folder with a map.js and index.html, have the form submit redirect to the map index.html
