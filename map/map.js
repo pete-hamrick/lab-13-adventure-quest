@@ -11,12 +11,26 @@ if (user.hp <= 0 || hasCompletedAllQuests(user)){
 const questList = document.getElementById('quest-list');
 
 for (let quest of quests) {
-    const questHref = `../quest/?questId=${quest.id}`;
+    if (user.completed[quest.id]){
+        createQuestSpan(quest);
+    } else {
+        createQuestLink(quest);
+    }
+}
 
+export function createQuestSpan(quest) {
+    const span = document.createElement('span');
+    span.innerText = `${quest.title} COMPLETED!`;
+    questList.appendChild(span);
+}
+
+export function createQuestLink(quest) {
+    const questHref = `../quest/?questId=${quest.id}`;
+    
     const questLink = document.createElement('a');
     questLink.href = questHref;
     questLink.textContent = quest.title;
-
+    
     questList.appendChild(questLink);
+    
 }
-

@@ -25,7 +25,7 @@
 1) set up a results folder with an index.html
 2) in quests.js grab the form DOM element and set up event listener on form submit
 3) in the quest form event listener: prevent default, set the state, get the chosen choice from the choices array, update the user object, and update the UX.
-4) in map.js grab the user data and check if quests are completed, if completed hide the link.(stretch: hide all but first link, when completed show completed quest 1 then unhide quest 2)
+4) in map.js grab the user data and check if quests are completed. if completed hide the link. TDD hasCompletedAllQuests function.(stretch: hide all but first link, when completed show completed quest 1 then unhide quest 2)
 5) create two functions createQuestLink and createQuestSpan, TDD then write the functions.
 6) still in map.js write an if statement where if hp <= 0 or quests are completed redirect to the results index.html.
 7) set up text in the results index.html. based on how many supplies available display different text. or if no HP display game over text.

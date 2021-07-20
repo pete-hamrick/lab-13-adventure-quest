@@ -1,10 +1,6 @@
 const ingredients = {
     id: 'ingredients',
     title: '1. Procure your ingredients from the store!',
-    map: {
-        top: '89%',
-        left: '44%'
-    },
     image: 'store.jpg',
     description: `
         You enter the fresh produce chamber only to be confronted 
@@ -34,17 +30,13 @@ const ingredients = {
             Because you have taken your time to enjoy the walk through the store, the big buffoon gets what he wanted, is satisfied, and leaves. You return to a peaceful produce aisle, grab superior fresh ingredients and find a 20 dollar bill!
         `,
         hp: 0,
-        gold: 60
+        supplies: 60
     }]
 };
 
 const build = {
     id: 'build',
     title: '2. Build the Perfect Sandwich!!!',
-    map: {
-        top: '17%',
-        left: '37%'
-    },
     image: 'kitchen.png',
     description: `
         You go to your kitchen to put together this Perfect Sandwich.
@@ -61,7 +53,7 @@ const build = {
             Unluckily, your whole goal was to make the Perfect Sandwich. 
             You die cause there's no point if you're not doing the Quest!
         `,
-        hp: -35,
+        hp: -30,
         supplies: 15
     }, {
         id: 'dirty',
@@ -93,10 +85,6 @@ const build = {
 const enjoy = {
     id: 'enjoy',
     title: '3. Time to sit down and enjoy the Perfect Sandwich',
-    map: {
-        top: '31%',
-        left: '5%'
-    },
     prerequisites: ['dragon', 'monsters'],
     image: 'diningroom.jpg',
     description: `
@@ -117,13 +105,13 @@ const enjoy = {
         description: 'You ignore their begging and bad behavior',
         result: 'Oh no! one of them jumps on you and while you move away from them the sandwich falls on the ground, they enjoy it. You die.',
         hp: -50,
-        gold: 0
+        supplies: 0
     }, {
         id: 'distract',
         description: 'You attempt to distract them with a toy',
-        result: 'They love toys, but they love food more. One does chase the toy. But, during the chase, the other grabs the sandwich. You are sad.',
-        hp: -40,
-        gold: 0
+        result: 'They love toys, but they love food more. One does chase the toy. But, during the chase, the other grabs most of the sandwich. You are sad.',
+        hp: -30,
+        supplies: 15
     }]
 };
 
