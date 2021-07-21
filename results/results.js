@@ -1,4 +1,4 @@
-import { getUser, USER, userDied } from '../data/storage-utils.js';
+import { getUser, USER } from '../data/storage-utils.js';
 // import quests from '../data/quest-data.js';
 
 const user = getUser();
