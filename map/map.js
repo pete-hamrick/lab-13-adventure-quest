@@ -1,6 +1,10 @@
 import quests from '../data/quest-data.js';
-import { getUser } from '../data/storage-utils.js';
+import { getUser, loadUser } from '../data/storage-utils.js';
 import { hasCompletedAllQuests } from './has-completed-all-quests.js';
+
+
+
+loadUser();
 
 const user = getUser();
 

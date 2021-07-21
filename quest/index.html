@@ -12,19 +12,27 @@
     <title>Quest</title>
 </head>
 <body>
-    <div id="quest-container">
-        <div id="quest-title"></div>
-        <img id="quest-image">
-        <p id="quest-description"></p>
-        <form id="choice-form">
-            <div id="choices">
-                
-            </div>
-            <button>I choose this</button>
-        </form>
-        <a class="hidden" id="back-link" href="../map/index.html">Back to Map</a>
-    </div>
-
+    <header>
+        <div class="profile">
+            <span class="profile-children" id="name"></span>
+            <span class="profile-children" id="hp"></span>
+            <span class="profile-children" id="supplies"></span>
+        </div>
+    </header>
+    <main>
+        <div id="quest-container">
+            <div id="quest-title"></div>
+            <img id="quest-image">
+            <p id="quest-description"></p>
+            <form id="choice-form">
+                <div id="choices">
+                    
+                </div>
+                <button>I choose this</button>
+            </form>
+            <a class="hidden" id="back-link" href="../map/index.html">Back to Map</a>
+        </div>
+    </main>    
     <script type="module" src="./quest.js"></script>
 </body>
 </html>

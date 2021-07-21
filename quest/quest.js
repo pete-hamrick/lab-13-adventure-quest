@@ -1,5 +1,5 @@
 import quests from '../data/quest-data.js';
-import { findById, getUser, setUser } from '../data/storage-utils.js';
+import { findById, getUser, setUser, loadUser, userDied } from '../data/storage-utils.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -7,6 +7,8 @@ const questTitle = document.getElementById('quest-title');
 const questImage = document.getElementById('quest-image');
 const questDescription = document.getElementById('quest-description');
 const choices = document.getElementById('choices');
+
+loadUser();
 
 const quest = findById(quests, searchParams.get('questId'));
 
@@ -33,6 +35,7 @@ for (let choice of quest.choices){
 const questForm = document.getElementById('choice-form');
 questForm.addEventListener('submit', (e)=>{
     e.preventDefault();
+    
     const choiceForm = new FormData(questForm);
 
     const choiceValue = choiceForm.get('choice');
@@ -48,4 +51,6 @@ questForm.addEventListener('submit', (e)=>{
     questDescription.textContent = choiceData.result;
     questForm.classList.add('hidden');
     backLink.classList.remove('hidden');
+
+    userDied();
 });

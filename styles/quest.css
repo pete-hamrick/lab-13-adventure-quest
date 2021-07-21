@@ -15,3 +15,15 @@ img {
     display: flex;
     flex-direction: column;
 }
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    justify-content: center;
+    border: 2px solid black;
+}
+.profile-children {
+    margin: 5px;
+    text-align: center;
+}
