@@ -1,4 +1,4 @@
-import { getUser } from '../data/storage-utils.js';
+import { getUser, USER } from '../data/storage-utils.js';
 // import quests from '../data/quest-data.js';
 
 const user = getUser();
@@ -35,3 +35,16 @@ const suppliesStory = document.createElement('div');
 suppliesStory.classList.add('supplies-story');
 suppliesStory.textContent = supplies(suppliesResult);
 resultsArea.appendChild(suppliesStory);
+
+const resetButton = document.createElement('button');
+resetButton.textContent = 'Play Again.';
+resultsArea.appendChild(resetButton);
+const emptyStorage = {};
+function clearStorage(){
+    localStorage.setItem(USER, JSON.stringify(emptyStorage));
+}
+
+resetButton.addEventListener('click', () => {
+    window.location.replace('../index.html');
+    clearStorage();
+});
