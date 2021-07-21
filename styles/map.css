@@ -13,8 +13,18 @@ a {
     text-align: center;
     background-color: rgba(128, 128, 128, 0.634);
 }
-body {
+
+header {
+    height: 100px;
+}
+.profile {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin-right: 25px;
     justify-content: center;
+    border: 2px solid black;
+}
+.profile-children {
+    margin: 5px;
+    text-align: center;
 }

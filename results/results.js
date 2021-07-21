@@ -1,8 +1,18 @@
-import { getUser, USER } from '../data/storage-utils.js';
+import { getUser, USER, userDied } from '../data/storage-utils.js';
 // import quests from '../data/quest-data.js';
 
 const user = getUser();
-
+// if (userDied()) {
+//     resultsArea.textContent = 'Your poor health conditions prevent you from making sandwiches.';
+//     const resetButton = document.createElement('button');
+//     resetButton.textContent = 'Play Again.';
+//     resultsArea.appendChild(resetButton);
+    
+//     resetButton.addEventListener('click', () => {
+//         window.location.replace('../index.html');
+//         clearStorage();
+//     });
+// } 
 const resultsArea = document.getElementById('results-area');
 const storyDiv = document.createElement('div');
 storyDiv.classList.add('story-div');
@@ -15,10 +25,8 @@ let story = 'After your adventures, ';
 story += user.name + ' the ' + user.class + ', had ';
 story += hpResult + ' health, and ';
 story += suppliesResult + ' supplies.';
-
-storyDiv.textContent = story;
 resultsArea.appendChild(storyDiv);
-console.log(suppliesResult);
+
 
 function supplies(suppliesResult) {
     if (suppliesResult < 50) {
@@ -33,9 +41,14 @@ function supplies(suppliesResult) {
 
 const suppliesStory = document.createElement('div');
 suppliesStory.classList.add('supplies-story');
-suppliesStory.textContent = supplies(suppliesResult);
 resultsArea.appendChild(suppliesStory);
 
+if (user.hp > 0) {
+    storyDiv.textContent = story;
+    suppliesStory.textContent = supplies(suppliesResult);
+} else {
+    resultsArea.textContent = 'Your poor health conditions prevent you from making sandwiches.';
+}
 const resetButton = document.createElement('button');
 resetButton.textContent = 'Play Again.';
 resultsArea.appendChild(resetButton);
